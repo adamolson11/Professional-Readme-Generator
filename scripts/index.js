@@ -1,15 +1,9 @@
 import fs from 'fs'
 import inquirer from "inquirer"
-import { getGitHubReadmemd } from './helpers.js'
-
-
-
-
+import {getGitHubReadmemd} from './helpers.js'
 
 
 inquirer.prompt([
-
-
 
     {
 
@@ -39,7 +33,7 @@ inquirer.prompt([
 
         type: 'input',
         name: 'description',
-        message: 'Enter project description: ',
+        message: 'Please enter a  brief description of what the project does and its main features: ',
 
     },
 
@@ -47,7 +41,7 @@ inquirer.prompt([
     {
         type: 'checkbox',
         name: 'installation',
-        message: 'How is this project installed?',
+        message: 'How is this project installed? This should be Step-by-step instructions on how to install and set up the project.',
         choices: ['git clone', 'npm  i', 'npm start']
 
 
@@ -58,19 +52,24 @@ inquirer.prompt([
 
         type: 'input',
         name: 'testing',
-        message: 'How many code violations have been reported for this robot?',
+        message: 'What Project testing needs are there if any?',
         default: " Manual testing",
 
     },
 
 
 
+ 
+
+
     {
         type: 'input',
-        name: 'usage',
-        message: 'Enter project usage restrictions: ',
+        name: 'features',
+        message: 'Enter project usage restrictions: Thisd should include nstructions on how to use the project.',
         default: "Open Source Project"
     },
+
+
 
     {
         type: 'input',
@@ -87,17 +86,12 @@ inquirer.prompt([
         default: "This project currently does not accept any contribution"
     },
 
-
-
-
     {
         type: 'input',
         name: 'email',
         message: 'What is the email address used?  ',
 
     },
-
-
 
     {
         type: 'input',
@@ -113,11 +107,7 @@ inquirer.prompt([
         choices: ['Generate HTML files','Generate MArkdown with Images', 'asdfdsfdsd', 'xxxxxxx']
         
 
-    }
-
-
-
-    
+    } 
 
 ])
     .then(answers => {
