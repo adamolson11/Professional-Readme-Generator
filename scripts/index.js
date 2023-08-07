@@ -21,6 +21,14 @@ inquirer.prompt([
     },
 
     {
+        type: 'input',
+        name: 'badgeURL',
+        message: 'Enter the badge URL:',
+        default: 'https://img.shields.io/badge/my-badge-blue',
+    },
+
+
+    {
 
         type: 'list',
         name: 'license',

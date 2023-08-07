@@ -20,9 +20,12 @@ function renderLicenseSection(license) {
 export const getGitHubReadmemd = ({ 
     name, projectName, license, description, 
     installation, testing, usage, GithubUserName, 
-    Contributing, email, AuthorName, Roadmap, features }) => {
+    Contributing, email, AuthorName, Roadmap, features,badgeURL }) => {
     return `
 # Project Name ${projectName}
+
+
+![Badge](${badgeURL})
 
 
 ## Table of Contents
